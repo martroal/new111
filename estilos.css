@@ -1,0 +1,98 @@
+*{margin:0; padding:0}
+
+body{
+    background: #c0c5ce;
+}
+
+header{
+    width: 100%;
+    overflow: hidden;
+    background: #343d46;
+    margin-bottom: 20px;
+    position: fixed;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin:auto;
+    overflow:hidden;
+}
+
+header .logo{
+    color: white;
+    font-size: 50px;
+    line-height: 60px;
+    float:left;
+}
+
+header nav{
+    float: right;
+    line-height: 50px;
+    margin: 5px;
+}
+
+header nav a{
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding:5px 10px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+header nav a:hover{
+    background: #4f5b66;
+    border-radius: 100px;
+    
+}
+
+.header2 {
+    position: fixed;
+    height: 100px;
+
+}
+
+.header2 .logo {
+    line-height: 100px;
+    font-size: 30px;
+}
+
+.header nav{
+    line-height: 100px;
+}
+
+
+.contenido {
+    padding-top: 120px;
+}
+.contenido p{
+    margin: 20px;
+    font-size: 150%;
+    font: arial;
+}
+
+.contenido h1{
+    margin-bottom:20px;
+    font-size: 300%;
+    text-align: center;
+    font-style: verdana;
+}
+
+@media screen and (max-width: 1000px) {
+    header .logo, 
+    header nav {
+        width: 100%;
+        text-align: center;
+        line-height:50px;
+    }
+}
+
+.contacto {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
