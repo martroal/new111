@@ -26,6 +26,72 @@
         <h1>Resumen:</h1>
         <p>Estudiante de Análisis de Sistemas motivado, activo y creativo con ganas de sumarme a una empresa en la cual me pueda formar. capacitar y seguir aprendiendo en el área de sistemas, donde también pueda llevar a cabo proyectos orientados a objetivos, tomando en cuenta el ciclo de vida de un sistema, acostumbrado a trabajar en equipo, con excelentes relaciones interpersonales. Ingles fluido: oral y escrito. Conocimientos básicos de Python, HTML, CSS, JavaScript. Manejo de paquete MS Office y MS Project. </p>
     </section>
-    
+    <style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Salesforce Sans", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+	@font-face {
+		font-family: 'Salesforce Sans';
+		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //O falso
+		embedded_svc.settings.language = ''; //Por ejemplo, introduzca 'en' o 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Toma como valor predeterminado Sesión de chat con un experto)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Toma como valor predeterminado Agente sin conexión)
+
+		//embedded_svc.settings.loadingText = ''; //(Toma como valor predeterminado Cargando)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Establece el dominio para su desarrollo de modo que los visitantes puedan navegar por subdominios durante una sesión de chat)
+
+		// Configuración para Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Establece la cumplimentación automática de los campos del formulario previo al chat
+		//embedded_svc.settings.fallbackRouting = []; //Una matriz de identificadores de botones, de usuario o userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Toma como valor predeterminado la opción Contacto)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://quiena--xappia1.my.salesforce.com',
+			'https://xappia1-chats-quiena.cs198.force.com/liveAgentSetupFlow',
+			gslbBaseURL,
+			'00D050000008kNz',
+			'Chat_Agents',
+			{
+				baseLiveAgentContentURL: 'https://c.la2-c1cs-ia4.salesforceliveagent.com/content',
+				deploymentId: '57246000000LM0E',
+				buttonId: '57346000000LNqq',
+				baseLiveAgentURL: 'https://d.la2-c1cs-ia4.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Chat_Agents',
+				isOfflineSupportEnabled: true
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://quiena--xappia1.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
 </body>
 </html>
